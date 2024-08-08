@@ -91,7 +91,7 @@ const routes = [
     name: 'student-list-view',
     component: StudentListView
   }
-],
+]
 
 // scrollBehavior( to,from,savedPosition){
 //   if (savedPosition){
