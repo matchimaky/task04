@@ -13,7 +13,7 @@ const { event } = toRefs(props)
 const router = useRouter()
 const store = useMessageStore()
 const register = () => {
-    store.updateMessage('You are successfully registered for' + props.event.title)
+    store.updateMessage('You are successfully registered for ' + props.event.title)
     setTimeout(() => {
       store.resetMessage()
     },3000)

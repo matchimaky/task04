@@ -41,6 +41,7 @@ onMounted(() => {
       |
       <router-link :to="{ name: 'event-edit-view' }">Edit</router-link>
     </nav>
+    
     <RouterView :event="event" />>
   </div>
 </template>

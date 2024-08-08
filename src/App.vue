@@ -26,9 +26,7 @@ if (route.query.pageSize) {
 <template>
   <div id="layout">
     <header>
-      <div id ="flashMessage" v-if="message">
-      <h4> {{ message }}</h4>
-    </div>
+     
       <div class="wrapper">
         <nav>
           <RouterLink :to="{ name: 'event-list-view' }">Home</RouterLink>
