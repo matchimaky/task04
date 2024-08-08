@@ -6,6 +6,7 @@ import { ref, onMounted, computed, watchEffect } from 'vue'
 import EventService from '@/services/EventService'
 import { useRoute } from 'vue-router'
 
+
 const events = ref<Event[] | null>(null)
 const totalEvents = ref(0)
 const hasNexPage = computed(() => {
@@ -29,6 +30,7 @@ const props = defineProps({
 onMounted(() => {
   watchEffect(() => {
     events.value = null
+
     EventService.getEvents(pageSize.value, page.value)
       .then((response) => {
         events.value = response.data
@@ -37,6 +39,7 @@ onMounted(() => {
       .catch((error) => {
         console.error('There was an error!', error)
       })
+   
   })
 })
 </script>
