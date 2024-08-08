@@ -29,7 +29,6 @@ const props = defineProps({
 
 onMounted(() => {
   watchEffect(() => {
-    events.value = null
 
     EventService.getEvents(pageSize.value, page.value)
       .then((response) => {
